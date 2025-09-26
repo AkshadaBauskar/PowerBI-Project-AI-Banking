@@ -26,13 +26,15 @@ Gender distribution highlights missing data: 25% Male, 25% Female, and 50% unspe
 
 ## Steps Followed  
 
-- **Step 1:** Created a synthetic dataset in **SQL Server Management Studio (SSMS)**. Three tables were generated – **Customers**, **Accounts**, and **Transactions** – using SQL scripts. ~10,000 transaction records were inserted for analysis.  
+- **Step 1:** Created a synthetic dataset in **SQL Server Management Studio (SSMS)**. Three tables were generated – **Customers**, **Accounts**, and **Transactions** – using SQL scripts. ~10,000 transaction records were inserted for analysis.
+  ![Step 1](./images/step1.png)
 
 - **Step 2:** Identified intentional **data quality issues** (nulls, inconsistent date formats, lowercase currency codes).  
   Standardized date format to **MM-DD-YYYY** using SQL update statements.  
 
 - **Step 3:** Combined the three tables into a single consolidated table **CombinedBankingDataset** using `LEFT JOINs`.  
-  This preserved all transaction data but introduced some nulls for unmatched rows.  
+  This preserved all transaction data but introduced some nulls for unmatched rows.
+    ![Step 3](./images/step3.png)
 
 - **Step 4:** Imported the consolidated dataset into **Power BI Desktop** and verified ~10,000 rows were loaded.  
 
